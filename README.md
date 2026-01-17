@@ -1,9 +1,3 @@
-Here’s a **clean, complete, submission-ready README** you can directly copy into your repo.
-It’s written at the **right level for this assignment**: clear, professional, not overhyped.
-
----
-
-```md
 # CA Monk Blog Application
 
 This project is a blog application built as part of the CA Monk frontend assignment.  
