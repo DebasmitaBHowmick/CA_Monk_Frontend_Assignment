@@ -3,6 +3,7 @@ import React from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { fetchBlogs } from '@/api/blogAPI';
 import BlogCard from './BlogCard';
+import LoadingSkeleton from './LoadingSkeleton';
 
 interface Props{
     onSelectBlog: (id: string) => void
@@ -16,7 +17,7 @@ const{data, isLoading, isError} = useQuery({
 });
 
 if(isLoading){
-    return <p className='text-center text-xl'>Loading...</p>
+    return <LoadingSkeleton/>
 }
 
 if(isError){

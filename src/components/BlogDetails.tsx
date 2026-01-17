@@ -4,6 +4,7 @@ import { useMutation, useQueryClient, useQuery } from "@tanstack/react-query";
 import { fetchBlogById, deleteBlog } from "../api/blogAPI";
 import { Button } from "./ui/button";
 import { Share2 } from "lucide-react";
+import LoadingSkeleton from "./LoadingSkeleton";
 
 interface Props {
   blogId: string | null;
@@ -38,7 +39,7 @@ const BlogDetails = ({ blogId, setSelectedBlogId }: Props) => {
     );
   }
   if (isLoading) {
-    return <p className="text-xl font-bold mt-4">Loading your blogs...</p>;
+    return <LoadingSkeleton/>;
   }
 
   if (isError || !data) {
